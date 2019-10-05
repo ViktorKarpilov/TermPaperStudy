@@ -1,0 +1,13 @@
+.ValutePair{
+    height: max-content;
+    font-size: 16pt;
+    
+    border: 0.1em;
+    opacity: 1;
+    border-style: solid;
+    background-color: #ffefb2;
+    border-radius: 9px;
+}
+#mainContainer{
+    justify-content: space-between;
+}

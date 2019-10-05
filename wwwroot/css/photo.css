@@ -1,0 +1,21 @@
+#mainContainer{
+    margin-top: auto;
+    height: max-content;
+}
+
+#mainContainer  .photoBlock{
+    border: 0.4em;
+    opacity: 1;
+    border-style: solid;
+    background-color: #ffefb2;
+    border-radius: 9px;
+    
+}
+
+#mainContainer  .photoBlock:hover{
+    border-color: #fce694;
+}
+
+.PhotoContainer{
+    width: 100%;
+}
