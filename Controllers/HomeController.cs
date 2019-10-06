@@ -28,6 +28,11 @@ namespace TermPaper.Controllers
         }
 
 
+        [HttpGet("/registration")]
+        public PartialViewResult Registration(){
+            return PartialView("_RegistrationPartial");
+        }
+
         [HttpGet("/photos")]
         public PartialViewResult Photos(){
             Dictionary<string,string> testDict = new Dictionary<string, string>();

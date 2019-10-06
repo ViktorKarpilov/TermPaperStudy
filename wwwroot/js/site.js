@@ -1,7 +1,7 @@
 ﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
-// Write your JavaScript code.
+var stocksUrl = 'https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11';
 
 var PhotoPageUrl = window.location.href + "/photos";
 var BooksPageUrl = "/books";
@@ -32,7 +32,14 @@ function GetPhotoPage(){
 
 function GetStocksPage(){
     ActivateAwaiter(GetAwaiter(),20);
-    fetchJsonPageToLoader('https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11');
+    fetchJsonPageToLoader(stocksUrl);
+}
+
+function GetRegistrationPage(){
+    ActivateAwaiter(GetAwaiter(),20);
+    fetchTextPageToLoader('/registration',function(){
+        getPageFromPageLoader()
+    });
 }
 
 function GetMainPage(){

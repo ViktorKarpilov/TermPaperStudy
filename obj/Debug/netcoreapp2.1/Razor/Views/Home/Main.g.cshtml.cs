@@ -58,7 +58,7 @@ using TermPaper.Models;
             WriteLiteral("\r\n<div id=\"mainContainer\" >\r\n        <div class=\"containerPart\" id=\"photoContainer\" onclick=\"GetPhotoPage()\">\r\n                ");
             EndContext();
             BeginContext(216, 49, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "0bd74c06e61d42459909e0dab268c047", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "bfe23c97aa2048f0b8db63a8aa926162", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -77,7 +77,7 @@ using TermPaper.Models;
             WriteLiteral("\r\n                <figcaption class=\"centeredText\"> Photos </figcaption>\r\n        </div>\r\n        <div class=\"containerPart\" id=\"booksContainer\" onclick=\"GetStocksPage()\">\r\n                ");
             EndContext();
             BeginContext(454, 50, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "cec4cd2e93ca4b009be40961420a1ac9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "03f0d28cd63e4bed8cf1f44308efeaf5", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -96,7 +96,7 @@ using TermPaper.Models;
             WriteLiteral("\r\n                <figcaption class=\"centeredText\"> Stocks </figcaption>\r\n        </div>\r\n        <div class=\"containerPart\" id=\"imagesContainer\">\r\n                ");
             EndContext();
             BeginContext(668, 49, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "3d9cd58bd0454a66a8516a339891a882", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "033faa0d69fd4ec7b088b73b01ba2798", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -115,7 +115,7 @@ using TermPaper.Models;
             WriteLiteral("\r\n                <figcaption class=\"centeredText\"> Paints </figcaption>\r\n        </div>\r\n        <div class=\"containerPart\" id=\"compositionsContainer\">\r\n                ");
             EndContext();
             BeginContext(887, 49, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "854181b9a2ea45bfb0304e8cbba6bece", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "a3cb36cf9ce742dd9d3b7a2a1a0451c4", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

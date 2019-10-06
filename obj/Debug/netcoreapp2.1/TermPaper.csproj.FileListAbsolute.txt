@@ -33,3 +33,4 @@ D:\Stable\Study\TermPaper\obj\Debug\netcoreapp2.1\TermPaper.csproj.CopyComplete
 d:\Stable\Study\TermPaper\obj\Debug\netcoreapp2.1\Razor\Views\Home\Main.g.cshtml.cs
 d:\Stable\Study\TermPaper\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_MainPartial.g.cshtml.cs
 d:\Stable\Study\TermPaper\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_PhotosPartial.g.cshtml.cs
+d:\Stable\Study\TermPaper\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_RegistrationPartial.g.cshtml.cs

@@ -1,0 +1,18 @@
+.registrationForm{
+    margin: auto;
+    padding: 10%;
+    border: 3px;
+    border-style: solid;
+    border-color:#424242; 
+    
+}
+.registrationForm input{
+    font-size: 16pt;
+    margin:2%;
+    border: 3px;
+    border-style: solid;
+    border-color:whitesmoke; 
+}
+.registrationForm:hover{
+    border-color:#0b0714; 
+}
