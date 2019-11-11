@@ -10,6 +10,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
+using JavaScriptEngineSwitcher.ChakraCore;
+using JavaScriptEngineSwitcher.Extensions.MsDependencyInjection;
+using React.AspNet;
+
 namespace TermPaper
 {
     public class Startup
@@ -31,8 +35,12 @@ namespace TermPaper
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddReact();
+            services.AddJsEngineSwitcher(options => 
+                    options.DefaultEngineName = ChakraCoreJsEngine.EngineName)
+                .AddChakraCore();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,6 +57,13 @@ namespace TermPaper
             }
 
             app.UseHttpsRedirection();
+            app.UseReact(config => 
+            {
+                config
+                    .AddScript("~/js/Example.jsx")
+                    // ...
+                    ;
+            });
             app.UseStaticFiles();
             app.UseCookiePolicy();
 

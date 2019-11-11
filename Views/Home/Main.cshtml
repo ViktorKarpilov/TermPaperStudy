@@ -22,3 +22,10 @@
                 <figcaption class="centeredText"> Compositions </figcaption>
         </div>   
 </div>
+
+@using React.AspNet
+@Html.React("Example", new { name = "Viktor" })
+
+@section Scripts {
+    @Html.ReactInitJavaScript()
+}
