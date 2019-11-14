@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+
 
 using JavaScriptEngineSwitcher.ChakraCore;
 using JavaScriptEngineSwitcher.Extensions.MsDependencyInjection;
@@ -34,7 +36,8 @@ namespace TermPaper
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
+            
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite("Data Source=Site.db"));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddReact();
@@ -60,7 +63,7 @@ namespace TermPaper
             app.UseReact(config => 
             {
                 config
-                    .AddScript("~/js/Example.jsx")
+                    .AddScript("~/js/RootComponent.jsx")
                     // ...
                     ;
             });

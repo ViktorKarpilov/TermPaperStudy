@@ -27,10 +27,19 @@ namespace TermPaper.Controllers
             return View();
         }
 
-
         [HttpGet("/registration")]
         public PartialViewResult Registration(){
             return PartialView("_RegistrationPartial");
+        }
+
+        [HttpPost("/reg")]
+        public IActionResult RegPost(){
+            return View("Main");
+        }
+
+        [HttpGet("/react")]
+        public PartialViewResult React(){
+            return PartialView("_ReactPage");
         }
 
         [HttpGet("/photos")]

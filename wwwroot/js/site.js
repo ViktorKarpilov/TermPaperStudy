@@ -18,7 +18,7 @@ var ImagesNumber;
 
 
 function GetPhotoPage(){
-    
+    console.log("Getting photo page");
     ActivateAwaiter(GetAwaiter(),20);
     
     fetchTextPageToLoader('/photos',function(){
@@ -82,6 +82,13 @@ function ActivateAwaiter(el,speed){
 		degrees = 1;
     }
     
+}
+
+function ActivateReact(){
+    ActivateAwaiter(GetAwaiter(),20);
+    fetchTextPageToLoader('/react',function(){
+        getPageFromPageLoader()
+    });  
 }
 
 function getPageFromPageLoader(){

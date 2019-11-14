@@ -16,3 +16,8 @@
 .registrationForm:hover{
     border-color:#0b0714; 
 }
+
+.mistakeLable{
+    display: none;
+    color:royalblue;
+}
