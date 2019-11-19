@@ -1,0 +1,16 @@
+@model IEnumerable<TermPaper.Models.CommentModel>
+<link rel="stylesheet" href="~/css/comments.css">
+<script src="~/js/comments.js" ></script>
+<form id="CommentForm" asp-controller="Home" asp-action="CommentPost" name="CommentPost" method="post">
+    
+    <textarea name="Comment" rows="8" cols="50">
+    </textarea>
+    <br>
+    <input type="submit" value="Submit">
+    
+</form>
+
+@foreach (var comment in Model)
+{
+    @await Html.PartialAsync("_CommentPartial",comment);
+}

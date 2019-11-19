@@ -1,0 +1,23 @@
+.LogInForm{
+    margin: auto;
+    padding: 10%;
+    border: 3px;
+    border-style: solid;
+    border-color:#424242; 
+    
+}
+.LogInForm input{
+    font-size: 16pt;
+    margin:2%;
+    border: 3px;
+    border-style: solid;
+    border-color:whitesmoke; 
+}
+.LogInForm:hover{
+    border-color:#0b0714; 
+}
+
+#WrongField{
+    display: none;
+    color:#9b1c31;
+}

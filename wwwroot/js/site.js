@@ -48,6 +48,19 @@ function GetMainPage(){
         getPageFromPageLoader()
     });
 }
+function GetCommentsPage(){
+    ActivateAwaiter(GetAwaiter(),20);
+    fetchTextPageToLoader('/comments',function(){
+        getPageFromPageLoader()
+    });
+}
+
+function GetLoginPage(){
+    ActivateAwaiter(GetAwaiter(),20);
+    fetchTextPageToLoader('/login',function(){
+        getPageFromPageLoader()
+    });
+}
 
 function GetAwaiter(){
     document.getElementById('mainContainer').innerHTML = "<i class='fab fa-affiliatetheme' id='LoadingIcon'></i>";
@@ -176,7 +189,17 @@ function rotate(element,RotationSpeed,start){
     element.style.transform = "rotate(" + String(RotationSpeed+start) + "deg)"
 }
 
-
-
+function Submition(event){
+    let data = new FormData(document.getElementById("LogInForm"));
+    event.preventDefault();
+    fetch("/LogPost", {
+        method: 'post',
+        body: data,
+    })
+    .then(response => {
+        if(response.status==200){window.location.href="";}
+    })
+    .catch(document.getElementById("WrongField").style.display="block");
+}
  
 

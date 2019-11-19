@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Session;
 
 
 using JavaScriptEngineSwitcher.ChakraCore;
@@ -37,8 +38,9 @@ namespace TermPaper
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
             
-            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite("Data Source=Site.db"));
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2).AddSessionStateTempDataProvider();
+            services.AddSession();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddReact();
             services.AddJsEngineSwitcher(options => 
@@ -49,6 +51,7 @@ namespace TermPaper
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -58,8 +61,9 @@ namespace TermPaper
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
-
+            app.UseSession();
             app.UseHttpsRedirection();
+            app.UseStaticFiles();
             app.UseReact(config => 
             {
                 config
@@ -67,9 +71,9 @@ namespace TermPaper
                     // ...
                     ;
             });
-            app.UseStaticFiles();
+            
             app.UseCookiePolicy();
-
+            
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

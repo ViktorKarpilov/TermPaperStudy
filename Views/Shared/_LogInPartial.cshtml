@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="~/css/login.css">
+<div>
+				<form class="LogInForm" id="LogInForm" method="Post" asp-controller="Home" asp-action="LoginPost" onsubmit="Submition(event)">
+					<label>
+						Names:
+    			    <input type="text" id="Username" name="Username" />
+					</label>
+					<label>
+						Password:
+    			    <input type="text" id="Password" name="Password" />
+					</label>
+					<label id="WrongField" style="display:none;" >
+						Wrong Username or Password
+					</label>
+					<input type="submit" value="Submit" />
+				</form>
+				
+</div>
+
+

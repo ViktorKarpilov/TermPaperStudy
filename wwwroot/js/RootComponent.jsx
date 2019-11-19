@@ -12,23 +12,26 @@ function MyFunc() {
 	console.log("aaa");
 }
 
+
+
+
 class RootComponent extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {value: ''};
-	
+		this.state = { value: '' };
+
 		this.SomeErrorFunc = this.SomeErrorFunc.bind(this);
 		this.handleChange = this.handleChange.bind(this);
-	  }
+	}
 
-	SomeErrorFunc(){
+	SomeErrorFunc() {
 		console.log("Error catch!");
 		event.preventDefault();
 	}
-	handleChange(){
+	handleChange() {
 		console.log("Can i handle you?");
 	}
-
+	
 	render() {
 		return (
 			<div>
@@ -37,14 +40,18 @@ class RootComponent extends React.Component {
 				<form className="registrationForm" method="Post" action="/reg" onSubmit={this.SomeErrorFuncs}>
 					<label>
 						Name:
-    			<input type="text" name="name" />
+    			<input type="text" name="Username" />
+					</label>
+					<label>
+						Password:
+    			<input type="text" name="Password" />
 					</label>
 					<label>
 						Email:
-    			<input type="text" name="name" onChange={this.handleChange}/>
+    			<input type="text" name="Email" onChange={this.handleChange} />
 					</label>
 					<Mistake />
-				<input type="submit" value="Submit" />
+					<input type="submit" value="Submit" />
 				</form>
 			</div>
 		);

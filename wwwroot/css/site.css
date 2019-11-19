@@ -12,11 +12,16 @@ a{
 a:hover{
     text-decoration: none;
 }
-
+#UsernameTitle{
+    color: whitesmoke;
+    font-size: 20pt;
+}
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
+    
     height: 89vh;
+    min-height: fit-content;
     margin: auto;
     margin-top:1vh;
     /*background-color:red;*/

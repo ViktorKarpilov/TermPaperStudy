@@ -1,10 +1,7 @@
-﻿@page
+﻿@model IEnumerable<TermPaper.Models.User>
 @inject Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnv
 @using React.AspNet
 
-@{
-    
-}
 <div id="mainContainer" >
 		<div class="containerPart" id="photoContainer" onclick="GetPhotoPage()">
 		<img class="photoBlock" src="/images/photo.jpg"/>
@@ -18,11 +15,17 @@
 		<img class="photoBlock" src="/images/paint.jpg"/>
 		<figcaption class="centeredText"> Paints </figcaption>
 	</div>
-	<div class="containerPart" id="compositionsContainer">
-		<img class="photoBlock" src="/images/music.jpg"/>
-		<figcaption class="centeredText"> Compositions </figcaption>
-	</div> 
+	<div class="containerPart" id="compositionsContainer" onclick="GetCommentsPage()">
+        <img class="photoBlock" src="~/images/comments2.jpg">
+        <figcaption class="centeredText"> Comments </figcaption>
+    </div>
 </div>
+
+
+
+    
+
+
 
 
 

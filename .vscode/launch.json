@@ -10,7 +10,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/netcoreapp2.1/TermPaper.dll",
+            "program": "${workspaceFolder}/bin/Debug/netcoreapp2.2/TermPaper.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,

@@ -32,9 +32,13 @@
             <ul class="navbarDropdown dropdown" >
                 <a onclick="GetPhotoPage() "><li>Photo Page  </li></a>
                 <a onclick="GetStocksPage()"><li>Valute Pairs</li></a>
+                <a onclick="GetLoginPage()"><li>Login</li></a>
                 <a onclick="ActivateReact()"><li>Registration</li></a>
+                
+                <a onclick="GetCommentsPage()"><li>Comments</li></a>
             </ul> 
         </li>
+        <li class="navbarItem" id="UsernameTitle" > @ViewData["User"]</li>
     </ul>
 
     <div class="container body-content">

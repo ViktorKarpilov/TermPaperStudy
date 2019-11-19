@@ -1,0 +1,48 @@
+body{
+    min-height:fit-content;
+}
+body .body-content{
+    height: fit-content;
+    
+}
+#CommentForm{
+    min-height:30% ;
+    width: 95%;
+    margin: auto;
+    padding: 3%;
+    border: 3px;
+    border-style: solid;
+    border-color:#424242; 
+    display: flex;
+    justify-content: center;
+    align-items: initial;
+    
+}
+
+#CommentForm textarea{
+    width: 90%;
+    height: 95%;
+}
+
+#CommentForm input{
+    min-height: 50px;
+    height: 80%;
+}
+
+.comment{
+    min-height:10% ;
+    width: 95%;
+    margin: auto;
+    margin-top: 1%;
+    padding: 1pt;
+    border: 3px;
+    border-style: solid;
+    border-color:#424242; 
+    display: flex;
+    flex-flow: column;
+}
+.comment .commentAuthor{
+    width: 100%;
+    background: rgba(0, 0, 0, 0.486);
+    color: burlywood;
+}

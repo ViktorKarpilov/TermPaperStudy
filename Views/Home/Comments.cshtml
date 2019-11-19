@@ -1,0 +1,19 @@
+@model IEnumerable<TermPaper.Models.CommentModel>
+@{
+    ViewData["Title"]="Comments";
+}
+<script src="~/js/comments.js" ></script>
+<form asp-controller="Home" asp-action="CommentPost" name="CommentPost" method="post">
+    
+    <textarea name="Comment">
+        Some text inside
+    </textarea>
+    <br>
+    <input type="submit" value="Submit">
+    
+</form>
+
+@foreach (var comment in Model)
+{
+    @await Html.PartialAsync("_CommentPartial",comment);
+}
